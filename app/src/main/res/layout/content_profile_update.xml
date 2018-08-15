@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/google_red" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:fadingEdge="horizontal"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/updated_profile_picture"
+                android:layout_width="138dp"
+                android:layout_height="138dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/movie" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                >
+                <TextView
+                    android:id="@+id/random1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hey, "
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/updated_username"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/random1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/field_username"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/update_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_square"
+                android:drawableLeft="@drawable/vector_person"
+                android:drawablePadding="8dp"
+                android:hint="Full Name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textCursorDrawable="@color/google_red" />
+
+            <EditText
+                android:id="@+id/update_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:minHeight="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_square"
+                android:drawableLeft="@drawable/vector_description"
+                android:drawablePadding="8dp"
+                android:hint="@string/description"
+
+
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textCursorDrawable="@color/google_red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center_horizontal"
+                android:text="*Description begins in the writer's imagination but should finish in the readers"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/updateProfileDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/signin_button"
+                android:text="@string/string_next"
+                android:textColor="@drawable/button_text_color_changer" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Skip>>"
+                android:textColor="@color/google_red"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

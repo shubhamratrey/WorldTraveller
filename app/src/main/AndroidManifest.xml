@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shubh.worldtraveller">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Include following permission if you load images from Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Include following permission if you want to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:name=".WorldTraveller"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <service android:name=".Worldtraveller.registration.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".Worldtraveller.registration.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <activity android:name=".Worldtraveller.registration.Activity_SignIn" />
+        <activity android:name=".Worldtraveller.registration.Activity_SignUp" />
+        <activity android:name=".Worldtraveller.home.Activity_Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Worldtraveller.maps.Activity_Maps" />
+        <activity android:name=".Worldtraveller.gallery.Activity_Camera" />
+        <activity android:name=".Worldtraveller.gallery.NextActivity" />
+        <activity android:name=".Worldtraveller.chats.Activity_Chats" />
+        <activity android:name=".Worldtraveller.profile.Activity_Profile" />
+        <activity
+            android:name=".Worldtraveller.profile.Activity_ProfileEdit"
+            android:label="@string/title_activity__profile_edit"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Worldtraveller.registration.Registration_Details" />
+        <activity android:name=".Worldtraveller.registration.UpdateProfile" />
+        <activity
+            android:name=".Worldtraveller.chats.Activity_Conversation"
+            android:parentActivityName=".Worldtraveller.chats.Activity_Chats">
+            <intent-filter>
+                <action android:name="com.example.shubh.worldtraveller_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Worldtraveller.profile.Activity_Post" />
+        <activity android:name=".Worldtraveller.profile.Activity_Comment" />
+        <activity android:name=".Worldtraveller.view.ViewProfileFragment" />
+        <activity android:name=".Worldtraveller.profile.Activity_Likes" />
+        <activity android:name=".Worldtraveller.home.Activity_Notification"></activity>
+    </application>
+
+</manifest>

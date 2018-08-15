@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:visibility="visible"
+            android:background="@drawable/notification_oval"
+            android:src="@drawable/vector_check"
+            android:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="11dp"
+        android:layout_weight="8"
+        android:background="@color/dark_grey" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/framelayout2"
+            android:layout_width="21dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/drawable_camera_profile_selector"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/google_red"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/search_btn2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            android:background="@drawable/notification_oval"
+            android:src="@drawable/vector_check"
+            android:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="11dp"
+        android:layout_weight="8"
+        android:background="@color/dark_grey" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/framelayout3"
+            android:layout_width="21dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/drawable_camera_profile_selector"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/google_red"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/search_btn3"
+            android:layout_width="36dp"
+            android:visibility="gone"
+            android:layout_height="36dp"
+            android:background="@drawable/notification_oval"
+            android:src="@drawable/vector_check"
+            android:tint="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

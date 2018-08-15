@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="10dp">
+
+    <ImageButton
+        android:id="@+id/conv_camera_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/vector_camera_gallery"
+        android:backgroundTint="@color/google_red"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:layout_toRightOf="@+id/conv_camera_btn"
+        android:paddingStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/drawable_rounded_recevied">
+
+        <EditText
+            android:id="@+id/chat_message_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Enter Message..."
+            android:inputType="textPersonName"
+            android:textColorHint="@color/dark_grey"
+            android:textCursorDrawable="@color/google_red"
+            android:textColor="@color/black"
+           android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"/>
+
+        <ImageButton
+            android:id="@+id/chat_send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_margin="10dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/vector_check"
+            />
+
+
+    </RelativeLayout>
+</RelativeLayout>

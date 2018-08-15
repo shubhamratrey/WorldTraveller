@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/google_red"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/profile_gridview"
+            android:layout_width="match_parent"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:layout_height="wrap_content"
+            android:numColumns="3">
+
+        </GridView>
+    </RelativeLayout>
+</LinearLayout>

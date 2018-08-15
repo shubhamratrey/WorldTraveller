@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/google_red" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp"
+        android:fadingEdge="horizontal"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <include layout="@layout/fragment_registration_part1" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_new_profile_photo"
+                android:textColor="@color/dark_grey"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/register_username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_square"
+                android:drawableLeft="@drawable/vector_person"
+                android:drawablePadding="8dp"
+                android:hint="@string/enter_new_username"
+                android:textAllCaps="false"
+                android:digits="@string/digits"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/dark_grey"
+                android:textCursorDrawable="@color/google_red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/it_s_easier_for_people_to_find_your_profile_when_it_has_unique_username"
+                android:textColor="@color/dark_grey"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"/>
+            <Button
+                android:id="@+id/nextbtn_registration"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="25dp"
+                android:background="@drawable/signin_button"
+                android:text="@string/string_next"
+                android:textColor="@drawable/button_text_color_changer" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

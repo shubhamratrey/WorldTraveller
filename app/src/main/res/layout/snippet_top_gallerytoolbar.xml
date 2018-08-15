@@ -1,0 +1,62 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/profileToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivCloseShare"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/vector_cross_btn"
+                    android:backgroundTint="@color/google_red" />
+
+                <Spinner
+                    android:id="@+id/spinnerDirectory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="@color/google_red"
+                    android:popupBackground="@color/google_red"
+                    android:layout_toRightOf="@+id/ivCloseShare"
+                    android:gravity="center_vertical"
+                    android:text="Gallery"
+                    android:textSize="20sp">
+
+                </Spinner>
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/layout_next"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/gallery_btns"
+                        android:text="@string/string_next"
+                        android:textColor="@color/google_red"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+</merge>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/conv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shubham"
+            android:textColor="@color/google_red"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/online_icon"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="3dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:src="@color/google_green" />
+            <TextView
+                android:id="@+id/custom_bar_seen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/conv_username"
+                android:text="Online"
+                android:textColor="@color/darker_grey" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivEllipses"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/vector_info"
+        android:tint="@color/google_red" />
+
+</RelativeLayout>

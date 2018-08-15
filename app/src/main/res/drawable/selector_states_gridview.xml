@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- grid view item pressed state -->
+    <item android:state_pressed="false" android:state_focused="false">
+        <shape>
+            <solid android:color="#f2f2f2"/>
+            <stroke
+                android:width="0.1dp"
+                android:color="#f2f2f2"/>
+            <corners android:radius="40dp"/>
+        </shape>
+    </item>
+
+    <item android:state_pressed="true" android:state_focused="true">
+        <shape>
+            <solid android:color="@color/google_red"/>
+            <corners android:radius="40dp"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true" android:state_focused="false">
+        <shape>
+            <solid android:color="@color/google_red"/>
+            <corners android:radius="40dp"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/camera_specification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Camera Specification"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/camera_manufacturer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/camera_specification"
+                android:layout_marginLeft="6dp"
+                android:drawableLeft="@drawable/vector_camera_model"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Canon 77D 2018"
+                android:layout_marginRight="4dp"
+                android:textColor="@color/google_red"
+                android:textSize="13sp" />
+
+            <View
+                android:id="@+id/view_camera"
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/black"
+                android:layout_below="@+id/camera_specification"
+                android:layout_toRightOf="@+id/camera_manufacturer_name"
+                />
+            <TextView
+
+                android:id="@+id/camera_model_name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/camera_specification"
+                android:layout_toRightOf="@+id/view_camera"
+                android:text="Canon"
+                android:layout_marginLeft="4dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/google_red" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1">
+
+                <!--iso-->
+
+                <ImageView
+                    android:id="@+id/photo_iso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:src="@drawable/vector_camera_iso" />
+
+                <TextView
+                    android:id="@+id/camera_iso_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/photo_iso"
+                    android:gravity="center"
+                    android:text="@string/hint_iso"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/camera_iso_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/photo_iso"
+                    android:backgroundTint="@color/google_red"
+                    android:hint="@string/hint_iso"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/camera_iso_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/camera_iso_edittext"
+                    android:backgroundTint="@color/google_red"
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+
+                <!--shutter_speed-->
+
+                <ImageView
+                    android:id="@+id/photo_shutterspeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_iso"
+                    android:src="@drawable/vector_camera_shutterspeed" />
+
+                <TextView
+                    android:id="@+id/camera_shutterspeed_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_iso"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/photo_shutterspeed"
+                    android:gravity="center"
+                    android:text="@string/hint_shutterspeed"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/camera_shutterspeed_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_iso"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/photo_shutterspeed"
+                    android:backgroundTint="@color/google_red"
+                    android:hint="@string/hint_shutterspeed"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/camera_shutterspeed_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_iso"
+                    android:layout_toRightOf="@+id/camera_shutterspeed_edittext"
+                    android:backgroundTint="@color/google_red"
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+
+                <!--focal_length-->
+
+                <ImageView
+                    android:id="@+id/photo_focal_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_shutterspeed"
+                    android:src="@drawable/vector_camera_focal_length" />
+
+                <TextView
+                    android:id="@+id/camera_focal_length_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_shutterspeed"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/photo_focal_length"
+                    android:gravity="center"
+                    android:text="@string/hint_focal_length"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/camera_focal_length_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_shutterspeed"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/photo_focal_length"
+                    android:backgroundTint="@color/google_red"
+                    android:hint="@string/hint_focal_length"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/camera_focal_length_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_shutterspeed"
+                    android:layout_toRightOf="@+id/camera_focal_length_edittext"
+                    android:backgroundTint="@color/google_red"
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <!--aperture-->
+
+                <ImageView
+                    android:id="@+id/photo_aperture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:src="@drawable/vector_camera_aperture1" />
+
+                <TextView
+                    android:id="@+id/camera_aperture_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/photo_aperture"
+                    android:gravity="center"
+                    android:text="@string/hint_aperture"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/camera_aperture_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/photo_aperture"
+                    android:backgroundTint="@color/google_red"
+                    android:hint="@string/hint_aperture"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/camera_aperture_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/camera_aperture_edittext"
+                    android:backgroundTint="@color/google_red"
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+
+                <!--flash-->
+
+                <ImageView
+                    android:id="@+id/photo_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_aperture"
+                    android:src="@drawable/vector_camera_flash"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/photo_flash_notfired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_aperture"
+                    android:src="@drawable/vector_camera_flash_notfired"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/camera_flash_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_aperture"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/photo_aperture"
+                    android:gravity="center"
+                    android:text="FLASH NOT FIRED"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/photo_aperture"
+                    android:layout_toRightOf="@+id/photo_aperture"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/black"
+                        android:checked="false"
+                        android:text="FIRED"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/black"
+                        android:checked="false"
+                        android:text="NOT FIRED"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/frag_email_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_square"
+        android:drawableLeft="@drawable/vector_email"
+        android:drawablePadding="8dp"
+        android:textCursorDrawable="@color/google_red"
+        android:hint="Enter your email"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/dark_grey" />
+
+    <EditText
+        android:id="@+id/frag_password_edittext"
+        android:textCursorDrawable="@color/google_red"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_square"
+        android:drawableLeft="@drawable/vector_lock"
+        android:drawablePadding="8dp"
+        android:hint="Enter new password"
+        android:imeOptions="actionSend"
+        android:inputType="textWebPassword"
+        android:maxLines="1"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/dark_grey" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/frag_signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/signin_button"
+        android:text="Sign up"
+        android:textColor="@drawable/button_text_color_changer" />
+
+</LinearLayout>
